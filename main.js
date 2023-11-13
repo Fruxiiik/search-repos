@@ -115,7 +115,6 @@ input.addEventListener('input', function (event) {
 
 listRepos.addEventListener('click', event => {
     if (event.target.tagName === 'BUTTON') {
-        console.log(response)
         const repo = response[event.target.dataset.id];
         addFavorite(repo);
         input.value = '';
