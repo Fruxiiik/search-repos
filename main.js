@@ -3,7 +3,7 @@
 const input = document.querySelector('input');
 const listRepos = document.querySelector('.listRepos');
 const listReposFavorite = document.querySelector('.listReposFavorite');
-const gridFavorite = 'display: grid; gap: 5px; grid-template-columns: 300px 200px 100px auto';
+const gridFavorite = 'display: grid; gap: 5px; grid-template-columns: 300px 200px 100px 80px';
 
 let favoriteRepositoriesArray = [];
 let response;
