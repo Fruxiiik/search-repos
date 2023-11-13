@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    border: none;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    background-color: #F2F2F2   ;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.search {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    background: #F2F2F2;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+    border-radius: 4px;
+    min-width: 50%;
+    box-shadow: 0 2px 20px rgba(100, 125, 145, 0.2);
+    color: #647D91;
+}
+
+input::placeholder {
+    color: #647D91;
+}
+
+.listRepos {
+    display: flex;
+
+    flex-direction: column;
+    gap: 8px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 20px;
+    min-width: 50vw;
+    box-shadow: 0 2px 20px rgba(100, 125, 145, 0.2);
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.listRepos.active {
+    opacity: 1;
+}
+
+.listRepos.inactive {
+    opacity: 0;
+}
+
+
+.listReposFavorite {
+    display: flex;
+    /*position: absolute;*/
+    top: 10px;
+    flex-direction: column;
+    gap: 8px;
+    border-radius: 8px;
+    margin-top: 10px;
+    padding: 20px;
+    min-width: 50vw;
+    box-shadow: 0 2px 20px rgba(100, 125, 145, 0.2);
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.listReposFavorite.active {
+    opacity: 1;
+}
+
+.listReposFavorite.inactive {
+    opacity: 0;
+}
+
+.listTitle {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 300px 200px 100px auto
+}
+
+.column {
+    overflow: hidden;
+    padding: 5px;
+    color: #647D91;
+    font-weight: bold;
+}
+
+
+
