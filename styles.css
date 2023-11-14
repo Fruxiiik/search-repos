@@ -110,5 +110,57 @@ input::placeholder {
     font-weight: bold;
 }
 
+.list-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 10px; /* Добавить отступ между элементами списка */
+}
 
+/* Стили для списка репозиториев */
+.repo-list {
+    list-style-type: none; /* Убрать маркеры списка */
+    padding: 0; /* Убрать внутренний отступ */
+}
+
+.repo-link {
+    text-decoration: none;
+    color: #7FB3D5;
+}
+
+.add-repo {
+    background: #A8DADC;
+    padding: 5px 12px;
+    border-radius: 4px;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+}
+
+.favorite-repository {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 300px 200px 100px 80px;
+}
+
+.favorite-text {
+    overflow: hidden;
+    color: #647D91;
+    padding: 5px;
+}
+
+.remove-repo {
+    background: #F08080;
+    padding: 7px 20px;
+    border-radius: 4px;
+    align-self: center;
+}
+
+.label {
+    padding: 5px;
+    margin-top: 10px;
+    color: #647D91;
+    font-weight: bold;
+}
 

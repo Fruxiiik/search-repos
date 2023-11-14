@@ -10,23 +10,25 @@ let response;
 
 
 function renderRepos(response) {
-    let list = '';
+    let list = '<ul class="repo-list">'; // Начало списка
     for (let index = 0; index < response.length; index++) {
-        list += `<p style="position: relative; display: flex; align-items: center; align-content: center;">
-            <a href="${response[index].html_url}" style="text-decoration: none; color: #7FB3D5" target="_blank" data-key="${index}">${response[index].name}</a>
-            <button class="add-repo" style="background: #A8DADC; padding: 5px 12px; border-radius: 4px; position: absolute; right: 0; z-index: 2;" data-id="${index}">Add</button>
-        </p>`;
+        list += `<li class="list-item">
+            <a href="${response[index].html_url}" class="repo-link" target="_blank" data-key="${index}">${response[index].name}</a>
+            <button class="add-repo" data-id="${index}">Add</button>
+        </li>`;
     }
+    list += '</ul>'; // Конец списка
     return list;
 }
 
+
 function renderFavoriteRepo(repo) {
     return `
-        <div style="${gridFavorite}" data-favoriteid="${repo.id}" class="favorite-repository">
-            <p style="overflow: hidden; color: #647D91; padding: 5px">${repo.name}</p>
-            <p style="overflow: hidden; color: #647D91; padding: 5px">${repo.owner}</p>
-            <p style="overflow: hidden; color: #647D91; padding: 5px">${repo.stars}</p>
-            <button class="remove-repo" style="background: #F08080; padding: 7px 20px; border-radius: 4px; align-self: center;" data-removeid="${repo.id}" >Delete</button>
+        <div class="favorite-repository" data-favoriteid="${repo.id}">
+            <p class="favorite-text">${repo.name}</p>
+            <p class="favorite-text">${repo.owner}</p>
+            <p class="favorite-text">${repo.stars}</p>
+            <button class="remove-repo" data-removeid="${repo.id}" >Delete</button>
         </div>
     `;
 }
